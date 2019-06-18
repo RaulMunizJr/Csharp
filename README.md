@@ -12,4 +12,6 @@ var challenge = " Text processing in c# is really great!  ";
 challenge.Trim().Substring(24, challenge.Trim().Length - 25).ToUpper().Trim() //"REALLY GREAT"
 
 var sb = new StringBuilder(); //sb.AppendLine("Keeps appending text");
+
+Math class: abs, floor, ceiling, pow, etc.
 ```
