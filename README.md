@@ -15,3 +15,27 @@ var sb = new StringBuilder(); //sb.AppendLine("Keeps appending text");
 
 Math class: abs, floor, ceiling, pow, etc.
 ```
+
+## Useful References:
+
+--------------IO---------------:
+```
+Console.WriteLine("Hello World!");
+
+string yourName;
+Console.WriteLine("What is your name?");
+yourName = Console.ReadLine();
+Console.WriteLine("Hello {0}", yourName); 
+```
+*Reading other Data types:
+```
+Convert.ToDouble, Convert.ToBoolean, etc.
+double n; string x = "77";
+n = Convert.ToDouble(x);
+```
+- var declartions must be assigned a value! ..or error occurs
+
+--------------Switch statement---------------:
+```
+
+```
