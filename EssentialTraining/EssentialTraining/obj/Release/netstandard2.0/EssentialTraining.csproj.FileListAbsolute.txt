@@ -1,0 +1,9 @@
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\bin\Release\netstandard2.0\EssentialTraining.deps.json
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\bin\Release\netstandard2.0\EssentialTraining.dll
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\bin\Release\netstandard2.0\EssentialTraining.pdb
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\obj\Release\netstandard2.0\EssentialTraining.csprojAssemblyReference.cache
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\obj\Release\netstandard2.0\EssentialTraining.csproj.CoreCompileInputs.cache
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\obj\Release\netstandard2.0\EssentialTraining.AssemblyInfoInputs.cache
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\obj\Release\netstandard2.0\EssentialTraining.AssemblyInfo.cs
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\obj\Release\netstandard2.0\EssentialTraining.dll
+C:\Users\RaulMuniz\source\repos\EssentialTraining\EssentialTraining\obj\Release\netstandard2.0\EssentialTraining.pdb
