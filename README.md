@@ -74,6 +74,7 @@ Same as C++
 for(;;) {} //infinte loop
 ```
 - The ? : Operator
+
 *Exp1 ? Exp2 : Exp3;
 ```
 int age = 42;
