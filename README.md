@@ -68,7 +68,16 @@ n = Convert.ToDouble(x);
 ```
 - var declartions must be assigned a value! ..or error occurs
 
---------------Switch statement---------------:
+--------------Loops---------------:
 ```
-
+Same as C++
+for(;;) {} //infinte loop
+```
+- The ? : Operator
+*Exp1 ? Exp2 : Exp3;
+```
+int age = 42;
+string msg;
+msg = (age >= 18) ? "Welcome" : "Sorry";
+Console.WriteLine(msg);
 ```
