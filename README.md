@@ -82,3 +82,19 @@ string msg;
 msg = (age >= 18) ? "Welcome" : "Sorry";
 Console.WriteLine(msg);
 ```
+--------------Passing by Reference---------------:
+*Pass by reference copies an argument's memory address into the formal parameter instead of value
+- ref keyword
+```
+static void Sqr(ref int x)
+{
+  x = x * x;
+}
+static void Main()
+{
+  int a = 3;
+  Sqr(ref a);
+
+  Console.WriteLine(a); // Outputs 9
+}
+```
