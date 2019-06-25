@@ -82,7 +82,17 @@ string msg;
 msg = (age >= 18) ? "Welcome" : "Sorry";
 Console.WriteLine(msg);
 ```
+
+- foreach Loop
+```
+//shorter and easier way of accessing array elements.
+foreach (var k in a) {
+  Console.WriteLine(k);
+}
+```
+
 --------------Passing by Reference---------------:
+
 *Pass by reference copies an argument's memory address into the formal parameter instead of value
 - ref keyword
 ```
@@ -97,4 +107,155 @@ static void Main()
 
   Console.WriteLine(a); // Outputs 9
 }
+//The ref keyword is used both when defining the method and when calling it.
 ```
+
+--------------Passing by Output---------------:
+
+*Output parameters are similar to reference parameters, except that they transfer data out of the method rather than accept data in.
+```
+static void GetValues(out int x, out int y)
+{
+  x = 5;
+  y = 42;
+}
+static void Main(string[] args)
+{
+  int a, b;
+  GetValues(out a, out b);
+  //Now a equals 5, b equals 42
+}
+//out keyword is used both when defining the method and when calling it.
+//useful when you need to return multiple values from a method.
+```
+
+--------------Encapsulation---------------:
+
+```
+class BankAccount
+{
+  private double balance=0;
+  public void Deposit(double n)
+  {
+    balance += n;
+  }
+  public void Withdraw(double n)
+  {
+    balance -= n;
+  }
+  public double GetBalance()
+  {
+    return balance;
+  }
+}
+//The class data can be read through the GetBalance method and modified only through the Deposit and Withdraw methods.
+//You cannot directly change the balance variable. You can only view its value using the public method. This helps maintain //data integrity.
+```
+
+```
+class Person
+{
+  private string name; //field
+
+  public string Name //property
+  {
+    get { return name; }
+    set { name = value; }
+  }
+}
+//The Person class has a Name property that has both the set and the get accessors.
+//The set accessor is used to assign a value to the name variable; get is used to return its value. 
+
+static void Main(string[] args)
+{
+  Person p = new Person();
+  p.Name = "Bob";
+  Console.WriteLine(p.Name);
+}
+
+//Value is a special keyword, which represents the value we assign to a property using the set accessor. 
+```
+
+--------------Auto-Implemented Properties---------------:
+
+*Allow for easy and short declaration of private members.
+```
+//public string Name { get; set; }
+
+class Person
+{
+  public string Name { get; set; }
+}
+static void Main(string[] args)
+{
+  Person p = new Person();
+  p.Name = "Bob";
+  Console.WriteLine(p.Name);
+}
+// Outputs "Bob"
+```
+
+--------------Arrays---------------:
+
+```
+int[ ] myArray;
+int[ ] myArray = new int[5]; 
+
+string[ ] names = new string[3] {"John", "Mary", "Jessica"};
+string[ ] names = new string[ ] {"John", "Mary", "Jessica"};
+string[ ] names = {"John", "Mary", "Jessica"};
+```
+
+--------------Multidimensional Arrays---------------:
+
+*type[, , … ,] arrayName = new type[size1, size2, …, sizeN];
+```
+int[ , ] x = new int[3,4]; //3x4, rc
+
+int[ , ] someNums = { {2, 3}, {5, 6}, {4, 6} }; //3r, 2c
+//Nested curly brackets are used to define values for each row.
+
+for (int k = 0; k < 3; k++) {
+  for (int j = 0; j < 2; j++) {
+    Console.Write(someNums[k, j]+" ");
+  }
+  Console.WriteLine();
+}
+```
+
+--------------Jagged Arrays---------------:
+
+*A jagged array is an array whose elements are arrays. So it is basically an array of arrays.
+```
+//The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional //array of integers:
+int[ ][ ] jaggedArr = new int[3][ ];
+
+//Each dimension is an array, so you can also initialize the array upon declaration like this:
+int[ ][ ] jaggedArr = new int[ ][ ] 
+{
+  new int[ ] {1,8,2,7,9},
+  new int[ ] {2,4,6},
+  new int[ ] {33,42}
+};
+//int x = jaggedArr[2][1]; //42
+
+//8 2dim arr
+int[ ][,] a = new int[8][,];
+```
+-  Length and Rank properties return the number of elements and the number of dimensions of the array, respectively
+
+--------------Strings---------------:
+
+- Length returns the length of the string.
+- IndexOf(value) returns the index of the first occurrence of the value within the string.
+- Insert(index, value) inserts the value into the string starting from the specified index.
+- Remove(index) removes all characters in the string after the specified index.
+- Replace(oldValue, newValue) replaces the specified value in the string.
+- Substring(index, length) returns a substring of the specified length, starting from the specified index. If length is not specified, the operation continues to the end of the string.
+- Contains(value) returns true if the string contains the specified value.
+
+
+
+
+
+
