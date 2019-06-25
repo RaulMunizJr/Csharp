@@ -4,7 +4,7 @@ Helpful Notes:
 
 (MAC) type "csharp" on terminal to replace 'REPL' on Windows.
 
-*useful for reviewing built-in methods like: CompareTo, Trim, ToUpper, Length, etc.
+* useful for reviewing built-in methods like: CompareTo, Trim, ToUpper, Length, etc.
 ```
 stringExample.Substring(4,8); //starts at index 4 and gets the first 8 chars after.
 
@@ -60,7 +60,7 @@ Console.WriteLine("What is your name?");
 yourName = Console.ReadLine();
 Console.WriteLine("Hello {0}", yourName); 
 ```
-*Reading other Data types:
+* Reading other Data types:
 ```
 Convert.ToDouble, Convert.ToBoolean, etc.
 double n; string x = "77";
@@ -75,7 +75,7 @@ for(;;) {} //infinte loop
 ```
 - The ? : Operator
 
-*Exp1 ? Exp2 : Exp3;
+* Exp1 ? Exp2 : Exp3;
 ```
 int age = 42;
 string msg;
@@ -93,7 +93,7 @@ foreach (var k in a) {
 
 --------------Passing by Reference---------------:
 
-*Pass by reference copies an argument's memory address into the formal parameter instead of value
+* Pass by reference copies an argument's memory address into the formal parameter instead of value
 - ref keyword
 ```
 static void Sqr(ref int x)
@@ -112,7 +112,7 @@ static void Main()
 
 --------------Passing by Output---------------:
 
-*Output parameters are similar to reference parameters, except that they transfer data out of the method rather than accept data in.
+* Output parameters are similar to reference parameters, except that they transfer data out of the method rather than accept data in.
 ```
 static void GetValues(out int x, out int y)
 {
@@ -178,7 +178,7 @@ static void Main(string[] args)
 
 --------------Auto-Implemented Properties---------------:
 
-*Allow for easy and short declaration of private members.
+* Allow for easy and short declaration of private members.
 ```
 //public string Name { get; set; }
 
@@ -208,7 +208,7 @@ string[ ] names = {"John", "Mary", "Jessica"};
 
 --------------Multidimensional Arrays---------------:
 
-*type[, , … ,] arrayName = new type[size1, size2, …, sizeN];
+* type[, , … ,] arrayName = new type[size1, size2, …, sizeN];
 ```
 int[ , ] x = new int[3,4]; //3x4, rc
 
@@ -225,7 +225,7 @@ for (int k = 0; k < 3; k++) {
 
 --------------Jagged Arrays---------------:
 
-*A jagged array is an array whose elements are arrays. So it is basically an array of arrays.
+* A jagged array is an array whose elements are arrays. So it is basically an array of arrays.
 ```
 //The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional //array of integers:
 int[ ][ ] jaggedArr = new int[3][ ];
@@ -256,7 +256,7 @@ int[ ][,] a = new int[8][,];
 
 --------------Static---------------:
 
-*This makes those members belong to the class itself, instead of belonging to individual objects. No matter how many objects of the class are created, there is only one copy of the static member.
+* This makes those members belong to the class itself, instead of belonging to individual objects. No matter how many objects of the class are created, there is only one copy of the static member.
 For example:
 ```
 class Cat {
@@ -329,7 +329,7 @@ class Rectangle : Shape {
 
 --------------Abstract Classes---------------:
 
-*An abstract class is intended to be a base class of other classes. It acts like a template for its derived classes.
+* An abstract class is intended to be a base class of other classes. It acts like a template for its derived classes.
 ```
 abstract class Shape {
   public abstract void Draw();
@@ -358,7 +358,7 @@ Abstract classes have the following features:
 
 --------------Interfaces---------------:
 
-*An interface is a completely abstract class, which contains only abstract members.
+* An interface is a completely abstract class, which contains only abstract members.
 It is declared using the interface keyword:
 ```
 public interface IShape {
