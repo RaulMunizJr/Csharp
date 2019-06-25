@@ -448,3 +448,49 @@ Exists() - determines whether the specified file exists.
 Copy() - copies a file to a new location.
 Move() - moves a specified file to a new location
 ```
+--------------Generics---------------:
+
+- method that will work with multiple types
+```
+static void Swap<T>(ref T a, ref T b) {
+  T temp = a;
+  a = b;
+  b = temp;
+}
+
+//Multiple generic parameters can be used with a single method. 
+//For example: Func<T, U> takes two different generic types.
+
+//generic classes
+class Stack<T> {
+  int index=0;
+  T[] innerArray = new T[100];
+  public void Push(T item) {
+    innerArray[index++] = item; 
+  }
+  public T Pop() {
+    return innerArray[--index]; 
+  }
+  public T Get(int k) { return innerArray[k]; }
+}
+```
+
+```
+The System.Collections.Generic namespace includes the following generic collections:
+- List<T>
+- Dictionary<TKey, TValue>
+- SortedList<TKey, TValue>
+- Stack<T>
+- Queue<T>
+- Hashset<T>
+```
+
+```
+The System.Collections namespace includes the following non-generic collections: 
+- ArrayList
+- SortedList
+- Stack
+- Queue
+- Hashtable
+- BitArray 
+```
