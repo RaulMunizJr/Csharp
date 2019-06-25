@@ -300,3 +300,151 @@ class Dog : Animal { } //Error
 2. Derived class constructor
 3. Object destoryed; derived class destructor
 4. base class destructor
+
+--------------Polymorphism---------------:
+
+- The virtual keyword allows methods to be overridden in derived classes.
+```
+class Shape {
+  public virtual void Draw() {
+    Console.Write("Base Draw");
+  }
+}
+```
+- Now, we can derive different shape classes that define their own Draw methods using the override keyword:
+```
+class Circle : Shape {
+  public override void Draw() {
+    // draw a circle...
+    Console.WriteLine("Circle Draw");
+  }
+}
+class Rectangle : Shape {
+  public override void Draw() {
+    // draw a rectangle...
+    Console.WriteLine("Rect Draw");
+  }
+}
+```
+
+--------------Abstract Classes---------------:
+
+*An abstract class is intended to be a base class of other classes. It acts like a template for its derived classes.
+```
+abstract class Shape {
+  public abstract void Draw();
+}
+class Circle : Shape {
+  public override void Draw() {
+    Console.WriteLine("Circle Draw");
+  }
+}
+class Rectangle : Shape {
+  public override void Draw() {
+    Console.WriteLine("Rect Draw");
+  }
+}
+static void Main(string[] args) {
+  Shape c = new Circle();
+  c.Draw();
+  //Outputs "Circle Draw"
+}
+
+Abstract classes have the following features:
+- An abstract class cannot be instantiated.
+- An abstract class may contain abstract methods and accessors.
+- A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.
+```
+
+--------------Interfaces---------------:
+
+*An interface is a completely abstract class, which contains only abstract members.
+It is declared using the interface keyword:
+```
+public interface IShape {
+  void Draw();
+}
+class Circle : IShape {
+  public void Draw() {
+    Console.WriteLine("Circle Draw");
+  }
+}
+static void Main(string[] args) {
+  IShape c = new Circle();
+  c.Draw();
+  //Outputs "Circle Draw"
+}
+```
+
+--------------Structs---------------:
+
+```
+struct Book {
+  public string title;  
+  public double price;
+  public string author;
+}
+
+static void Main(string[] args) {
+  Book b;
+  b.title = "Test";
+  b.price = 5.99;
+  b.author = "David";
+
+  Console.WriteLine(b.title);
+  //Outputs "Test"
+}
+```
+
+--------------Enum---------------:
+
+```
+-> enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat}; //Sun=0, etc.
+enum Days {Sun, Mon, Tue=4, Wed, Thu, Fri, Sat}; //0, 1, 4, Wed=5, etc.
+
+static void Main(string[] args) {
+  int x = (int)Days.Tue;
+  Console.WriteLine(x);
+  //Outputs 2
+}
+```
+- Commonly used in switch statements
+```
+enum TrafficLights { Green, Red, Yellow };
+
+static void Main(string[] args) {
+  TrafficLights x = TrafficLights.Red;
+  switch (x) {
+    case TrafficLights.Green:
+      Console.WriteLine("Go!");
+      break;
+    case TrafficLights.Red:
+      Console.WriteLine("Stop!");
+      break;
+    case TrafficLights.Yellow:
+      Console.WriteLine("Caution!");
+      break;
+  }
+  //Outputs "Stop!"
+}
+```
+
+- Writing to Files
+```
+string str = "Some text";
+File.WriteAllText("test.txt", str);
+```
+
+- Reading from Files
+```
+string txt = File.ReadAllText("test.txt");
+Console.WriteLine(txt); 
+
+The following methods are available in the File class:
+AppendAllText() - appends text to the end of the file.
+Create() - creates a file in the specified location.
+Delete() - deletes the specified file.
+Exists() - determines whether the specified file exists.
+Copy() - copies a file to a new location.
+Move() - moves a specified file to a new location
+```
