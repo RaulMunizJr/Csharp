@@ -254,8 +254,49 @@ int[ ][,] a = new int[8][,];
 - Substring(index, length) returns a substring of the specified length, starting from the specified index. If length is not specified, the operation continues to the end of the string.
 - Contains(value) returns true if the string contains the specified value.
 
+--------------Static---------------:
 
+*This makes those members belong to the class itself, instead of belonging to individual objects. No matter how many objects of the class are created, there is only one copy of the static member.
+For example:
+```
+class Cat {
+  public static int count=0;
+  public Cat() {
+    count++;
+  }
+}
+//No matter how many Cat objects are instantiated, there is always only one count variable that belongs to the Cat class //because it was declared static.
+```
+- Because of their global nature, static members can be accessed directly using the class name without an object.
+```
+Console.WriteLine(Cat.count);//increments!
 
+//Same for methods!
+class Dog
+{
+  public static void Bark() {
+    Console.WriteLine("Woof");
+  }
+}
+static void Main(string[] args)
+{
+  Dog.Bark();
+}
+// Outputs "Woof"
+```
+- Constant members are static by definition. (const)
 
+- sealed, prevents other classes from inheriting it
+```
+sealed class Animal {
+  //some code
+}
+class Dog : Animal { } //Error
+```
 
+- With inheritance, the base class constructor and destructor are not inherited, so you should define constructors for the derived classes.
 
+1. First the base class constructor
+2. Derived class constructor
+3. Object destoryed; derived class destructor
+4. base class destructor
